@@ -1,0 +1,9 @@
+{
+  "release": "share-v3-20261108",
+  "title": "崩坏修复师之承天寺夜游",
+  "entry": "hi3d-index.html",
+  "frozen": true,
+  "development": "exports/night-tour",
+  "models": 18,
+  "bytes": 320552748
+}
