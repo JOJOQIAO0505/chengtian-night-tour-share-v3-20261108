@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101f29"><title>崩坏修复师之承天寺夜游</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23cbb47d'/%3E%3C/svg%3E"><link rel="stylesheet" href="./hi3d-style.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head>
+<body>
+<canvas id="world" aria-label="可探索的三维场景"></canvas><div class="vignette"></div>
+<div id="loading" class="veil"><div class="load-seal">修</div><h2>展卷入夜</h2><p id="load-text">正在准备庭院与书库…</p><div class="progress"><i id="load-bar"></i></div><p class="muted">首次加载包含本地模型与原始贴图，请稍候</p><button id="retry" hidden onclick="location.reload()">重新加载</button></div>
+<main id="title-screen" hidden>
+ <div class="topline"><span>异时书库 · 案卷〇〇一</span><span>一场关于月色的修复</span></div>
+ <div class="title-copy"><div class="overline">东方幻想 · 叙事解谜</div><div class="series">崩坏修复师</div><h1><small>之</small> 承天寺夜游</h1><div class="title-line"></div><p>一庭月色，几处疑痕。<br>走入故事，让每一次判断都有来处。</p><button id="start" class="primary">开始游戏 <span>→</span></button><button id="continue" class="text-button" hidden>继续上次的夜游 →</button><div class="title-hint">约 5–8 分钟 · 电脑键鼠 · 自动存档</div></div>
+ <div class="title-side">何 夜 无 月<br>何 处 无 竹 柏</div><footer>《崩坏修复师之承天寺夜游》<span>改编体验 · 角色对白均为虚构</span></footer>
+</main>
+<section id="hud" hidden>
+ <header><div class="brand"><span class="mini-seal">修</span><div>崩坏修复师<small>之承天寺夜游</small></div></div><div id="place"><span>异时书库</span><small>未来 · 案卷接入</small></div><nav><button id="journal">线索簿 <b id="clue-count">0</b></button><button id="commission">委托</button><button id="menu">☰</button></nav></header>
+ <div class="objective"><span>当前目标</span><p id="objective-text"></p></div>
+ <div class="night-budget"><span id="visit-budget"></span><strong id="time-budget"></strong><small id="timer-note"></small></div><button id="return-future" class="return-large" hidden title="R：回到未来查阅原作"><span>↶</span><strong>回到未来 <kbd>R</kbd></strong><small>查阅原作 · 核对现场</small></button><button id="travel-shortcut" class="return-large travel-large" hidden title="T：自动闪移到穿梭机并进入承天寺"><span>⌁</span><strong>进入承天寺 <kbd>T</kbd></strong><small>自动前往穿梭机</small></button><div id="labels"></div><div id="interact" hidden><kbd>E</kbd><span id="interact-text"></span></div>
+ <div class="controls"><span><kbd>WASD</kbd> / <kbd>↑↓←→</kbd> 虚影闪移 · 按住连续</span><span>拖动鼠标 · 环顾</span><span><kbd>E</kbd> 交互</span><span><kbd>Esc</kbd> 关闭</span></div><div id="save-state">已自动存档</div>
+</section>
+<section id="panel" hidden aria-modal="true" role="dialog"><div class="panel-shade"></div><article id="paper"><div class="paper-top"><span id="panel-kind"></span><button id="close-panel" aria-label="关闭面板">×</button></div><h2 id="panel-title"></h2><div id="panel-body"></div><div id="options"></div><div class="paper-foot">异时书库 · 修复记录<span>Esc 收起</span></div></article></section>
+<div id="transition" aria-live="polite"><div class="transition-line"></div><span id="transition-label"></span><small>循文字的缝隙，抵达另一段夜色</small></div>
+<div id="toast" role="status"></div><div id="fatal" hidden><h2>画卷暂未展开</h2><p></p><button onclick="location.reload()">重新加载</button><a href="./hi3d-README.md" download>下载启动说明</a></div>
+<script type="module" src="./hi3d-main-phase-v4.js"></script>
+</body></html>
